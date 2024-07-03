@@ -26,3 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     alert("You've made me the happiest person alive!");
   }
 });
+
+document.addEventListener('keydown',(e)=>{
+  if(e.key == "Tab"){
+    e.preventDefault();
+  }
+});
