@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A Message From My Heart</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap');
 
@@ -68,10 +69,11 @@
       text-align: center;
       box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
       width: 100%;
-      max-width: clamp(300px, 90vw, 700px);
+      max-width: clamp(300px, 90vw, 1000px);
       position: relative;
       animation: slideIn 1s ease-out;
-      max-height: 90vh;
+      /* max-height: 90vh; */
+      /* overflow-y: scroll; */
       overflow: hidden;
     }
 
@@ -251,11 +253,12 @@
 
     /* Success message */
     .success-message {
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      /* height: 100%; */
+      min-height: 100vh;
       background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
       display: none;
       flex-direction: column;
@@ -263,7 +266,7 @@
       align-items: center;
       z-index: 2000;
       animation: fadeIn 0.8s ease-out;
-      overflow: hidden;
+      /* overflow: hidden; */
       padding: 1rem;
     }
 
@@ -276,7 +279,7 @@
       text-align: center;
       color: white;
       animation: bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-      max-height: 90vh;
+      /* max-height: 90vh; */
       /* overflow-y: auto; */
     }
 
@@ -449,7 +452,7 @@
     <div class="success-content">
       <h2>You've Made My Dreams Come True! ✨</h2>
       <img src="https://media.giphy.com/media/MDJ9IbxxvDUQM/giphy.gif" alt="Celebration" class="celebration-gif">
-      <p>Thank you for choosing love, choosing us, and choosing forever. You are my heart, my soul, and my everything. I promise to love you more each day, to be your biggest supporter, and to create the most beautiful memories together. Our love story is just beginning! 💕</p>
+      <p class="text-center">Thank you for choosing love, choosing us, and choosing forever. You are my heart, my soul, and my everything. I promise to love you more each day, to be your biggest supporter, and to create the most beautiful memories together. Our love story is just beginning! 💕</p>
       <div class="love-message">
         I love you to the moon and back! 🌙⭐
       </div>
