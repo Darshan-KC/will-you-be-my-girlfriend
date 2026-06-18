@@ -1,0 +1,66 @@
+/* style.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: url('https://images.unsplash.com/photo-1535615615570-3b839f4359be?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y291cGxlJTIwaW4lMjBsb3ZlfGVufDB8fDB8fHww') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+form {
+  background: rgba(0, 0, 0, 0.7); /* Darker transparency for better contrast */
+  padding: 2em 3em; /* Increased padding for more space */
+  border-radius: 10px; /* Slightly reduced border radius */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increased shadow for depth */
+  text-align: center;
+  backdrop-filter: blur(10px);
+  max-width: 400px; /* Added max-width for better fit */
+  margin: 20px; /* Added margin for spacing */
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+input[type="submit"] {
+  color: #fff;
+  border: none;
+  padding: 0.7em 2em;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#yes {
+  background-color: red;
+}
+
+#no {
+  background-color: blue;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+input[type="submit"]:active {
+  transform: scale(0.95);
+}

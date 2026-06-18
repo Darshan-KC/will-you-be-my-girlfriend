@@ -1,35 +1,38 @@
-/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Pacifico', cursive;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-  background: url('https://images.unsplash.com/photo-1535615615570-3b839f4359be?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Y291cGxlJTIwaW4lMjBsb3ZlfGVufDB8fDB8fHww') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1535615615570-3b839f4359be?w=800&auto=format&fit=crop&q=60') no-repeat center center fixed;
   background-size: cover;
   color: #fff;
+  position: relative;
 }
 
 form {
-  background: rgba(0, 0, 0, 0.7); /* Darker transparency for better contrast */
-  padding: 2em 3em; /* Increased padding for more space */
-  border-radius: 10px; /* Slightly reduced border radius */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increased shadow for depth */
+  background: rgba(255, 255, 255, 0.15);
+  padding: 2em 3em;
+  border-radius: 15px;
   text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
-  max-width: 400px; /* Added max-width for better fit */
-  margin: 20px; /* Added margin for spacing */
+  max-width: 400px;
+  margin: 20px;
 }
 
 h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+  font-size: 3em;
+  margin-bottom: 0.3em;
+  color: #ffccd5;
+  animation: pulse 2s infinite;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
   margin-bottom: 1.5em;
 }
 
@@ -42,25 +45,62 @@ h2 {
 input[type="submit"] {
   color: #fff;
   border: none;
-  padding: 0.7em 2em;
-  font-size: 1em;
-  border-radius: 25px;
+  padding: 0.8em 2.5em;
+  font-size: 1.1em;
+  border-radius: 30px;
   cursor: pointer;
-  transition: opacity 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 #yes {
-  background-color: red;
+  background-color: #ff4d6d;
 }
 
 #no {
-  background-color: blue;
+  background-color: #0077b6;
 }
 
 input[type="submit"]:hover {
-  opacity: 0.8;
+  opacity: 0.9;
+  transform: scale(1.05);
 }
 
 input[type="submit"]:active {
   transform: scale(0.95);
+}
+
+#gif-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 2em;
+  text-align: center;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+#gif-container img {
+  max-width: 300px;
+  margin-bottom: 1em;
+  border-radius: 15px;
+}
+
+#gif-container p {
+  font-size: 1.5em;
+  color: #e63946;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }

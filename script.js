@@ -1,34 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
   const yesButton = document.getElementById('yes');
   const noButton = document.getElementById('no');
-  let isYesFirst = true; // Track the current position of the "Yes" button
+  const form = document.getElementById('proposal-form');
+  const gifContainer = document.getElementById('gif-container');
+
+  let isYesFirst = true;
 
   noButton.addEventListener('mouseover', swapButtons);
-  noButton.addEventListener('click', swapButtons);
-  yesButton.addEventListener('click', displayMessage);
+  noButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    swapButtons();
+  });
+
+  yesButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    form.style.display = 'none';
+    gifContainer.classList.remove('hidden');
+    gifContainer.style.display = 'block';
+  });
 
   function swapButtons() {
     const buttonsContainer = yesButton.parentNode;
-
-    // Check if "Yes" button is first or second
     if (isYesFirst) {
-      // If "Yes" button is first, swap positions
       buttonsContainer.insertBefore(noButton, yesButton);
-      isYesFirst = false;
     } else {
-      // If "No" button is first, swap positions
       buttonsContainer.insertBefore(yesButton, noButton);
-      isYesFirst = true;
     }
-  }
-
-  function displayMessage() {
-    alert("You've made me the happiest person alive!");
+    isYesFirst = !isYesFirst;
   }
 });
 
-document.addEventListener('keydown',(e)=>{
-  if(e.key == "Tab"){
-    e.preventDefault();
-  }
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Tab') e.preventDefault();
 });
